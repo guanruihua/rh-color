@@ -1,7 +1,7 @@
 {
-  "name": "rh-test",
-  "version": "0.0.1",
-  "description": "测试方法的包",
+  "name": "rh-color",
+  "version": "0.0.4",
+  "description": "颜色console",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "unpkg": "/lib/",
@@ -39,6 +39,7 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.1",
     "ts-node": "^10.4.0",
     "ts-node-dev": "^1.1.8",

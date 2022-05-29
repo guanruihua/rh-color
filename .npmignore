@@ -5,3 +5,7 @@ push.bat
 .gitignore
 jest.config.ts
 tsconfig.json
+test/
+.*
+rollup.*
+node_modules/
