@@ -1,11 +1,11 @@
 {
   "name": "rh-color",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "颜色console",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
-  "unpkg": "/lib/",
-  "jsdelivr": "/lib/",
+  "unpkg": "lib/",
+  "jsdelivr": "lib/",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "npx rollup -c --extend rollup.config.ts",

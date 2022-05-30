@@ -9,3 +9,4 @@ test/
 .*
 rollup.*
 node_modules/
+lib/
