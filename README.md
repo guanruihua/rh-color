@@ -5,6 +5,9 @@
 
 ## 更新日志
 
+- 0.0.6 正常使用的版本, 完善使用文档
+
+-
 <div class="exploded-line" />
 
 ## log
@@ -24,6 +27,17 @@ import { Color, log } from "rh-color";
 log(Color.Green, Color.Blue)('内容', '内容')
 log(Color.Green)('内容', '内容')
 log()('内容', '内容')
+```
+
+### 浏览器使用
+
+```html
+ <script type="module">
+ //  这里0.0.6指的是npm包的版本
+  import { log, Color } from 'https://cdn.jsdelivr.net/npm/rh-color@0.0.6/lib/index.esm.js'
+  log(Color.Red)('内容')
+  log(Color.Red, Color.Green)('内容')
+ </script>
 ```
 
 ## 支持颜色

@@ -1,6 +1,6 @@
 {
   "name": "rh-color",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "颜色console",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",

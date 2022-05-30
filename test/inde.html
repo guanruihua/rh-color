@@ -16,13 +16,11 @@
 <body>
 
 	<script src="https://cdn.jsdelivr.net/npm/rh-static@0.0.1/js/addWindowSize.js" defer></script>
-	<!-- <script src="https://unpkg.com/rh-color@0.0.4/index.js"></script> -->
 	<script type="module">
-		// import { rUtil } from "../lib/index.esm.js";
-		// import * as __ from 'https://cdn.jsdelivr.net/npm/rh-color@0.0.4/index.js'
-		// rUtil.logGroup('name', 123, 123) https://unpkg.com/browse/react@18.1.0/
-		console.log(123)
-		// console.log(__)
+		import { log, Color } from '../lib/index.esm.js'
+		// import { log, Color } from 'https://cdn.jsdelivr.net/npm/rh-color@0.0.5/lib/index.esm.js'
+		log(Color.Green)('内容')
+		log(Color.White, Color.Blue)('内容')
 	</script>
 </body>
 

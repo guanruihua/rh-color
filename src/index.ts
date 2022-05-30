@@ -1,4 +1,4 @@
-import { Bg, Color, Font } from "./constants";
+import { Color, ColorMapValue } from "./constants";
 export {
 	Color
 }
@@ -11,13 +11,13 @@ export {
  */
 export function log(fontColorKey: string = Color.White, bgColorKey?: string) {
 
-	const color = `\x1b[${Font[fontColorKey] || Font.White}${bgColorKey
-		? `\x1b[${Bg[bgColorKey]}`
+	const color = `\x1b[3${ColorMapValue[fontColorKey] || ColorMapValue.White}m${bgColorKey
+		? `\x1b[4${ColorMapValue[bgColorKey]}m`
 		: ''}`
 
 	return function (...args: any[]) {
 		typeof global === 'object'
-			? console.log(`\x1b[0m${color}m%s`, ...args, '\x1b[0m')
-			: console.log(`\x1b[0m${color}m%s`, ...args)
+			? console.log(`\x1b[0m${color}%s`, ...args, '\x1b[0m')
+			: console.log(`\x1b[0m${color}%s`, ...args)
 	}
 }
