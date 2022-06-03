@@ -1,8 +1,8 @@
 export * from "../src";
 // export * from "../lib/index";
-
-// import './color.test'
-import './mult.test'
+// 
+import './color.test'
+// import './mult.test'
 
 // log(Color.Green, Color.Blue)(123, 123, '\x1b[0m\x1b[33m%O', '\x1b[0m', {
 // log(Color.Red)('123','345', 123, {})

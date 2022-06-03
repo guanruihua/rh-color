@@ -1,6 +1,6 @@
 {
   "name": "rh-color",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "颜色console",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -17,7 +17,10 @@
   },
   "keywords": [
     "typescript",
-    "javascript"
+    "javascript",
+    "color",
+    "console",
+    "log"
   ],
   "author": "ruihuag",
   "license": "ISC",
