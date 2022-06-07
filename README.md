@@ -54,16 +54,16 @@ log()('内容', '内容')
 
 > 背景颜色和字体颜色相同
 
-| 颜色 | 代码              |
-| :--- | :---------------- |
-| 黑色 | `Color.Black`     |
-| 红色 | `Color.Red`       |
-| 绿色 | `Color.Green`     |
-| 黄色 | `Color.Yellow`    |
-| 蓝色 | `Color.Blue`      |
-| 紫色 | `Color.Purple`    |
-| 深绿 | `Color.DarkGreen` |
-| 白色 | `Color.White`     |
+| 颜色 | 代码             |
+| :--- | :--------------- |
+| 黑色 | `Color.Black`    |
+| 红色 | `Color.Red`      |
+| 绿色 | `Color.Green`    |
+| 黄色 | `Color.Yellow`   |
+| 蓝色 | `Color.Blue`     |
+| 蓝色 | `Color.DarkBlue` |
+| 紫色 | `Color.Purple`   |
+| 白色 | `Color.White`    |
 
 ### 占位符打印
 
