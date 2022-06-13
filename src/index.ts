@@ -1,38 +1,48 @@
-import { Color, ColorMapValue } from "./constants";
-export {
-	Color
+import { styles, Styles } from "./constants";
+
+export { styles, Styles }
+
+function keysToString(keys: Styles | Styles[]) {
+	let color = ''
+	if (typeof keys === 'string') {
+		color = styles[keys]
+	}
+	else {
+		keys.forEach(key => {
+			color += styles[key]
+		});
+	}
+
+	return color
 }
-
-
 
 /**
  * @title log
  * @description 设置console的字体颜色和背景颜色
- * @param fontColorKey 字体颜色
- * @param ? bgColorKey 背景颜色
+ * @param ...keys Styles[] 样式
  * @returns function(...args) { ...args: 要打印的内容 }
  */
-export function log(fontColorKey: string = Color.White, bgColorKey?: string) {
-	const color = `\x1b[3${ColorMapValue[fontColorKey] ?? ColorMapValue.White}m${bgColorKey
-		? `\x1b[4${ColorMapValue[bgColorKey]}m`
-		: ''}`
+export function log(...keys: Styles[]) {
+	const color = keysToString(keys)
 	const isNotBrowser: boolean = typeof global === 'object'
 
 	return function (...args: any[]) {
-		if (isNotBrowser) args.push('\x1b[0m')
+		if (isNotBrowser) args.push(styles.Reset)
 		console.log(`\x1b[0m${color}%s`, ...args)
 	}
 }
 
-export function rlog(fontColorKey: string = Color.White, bgColorKey?: string) {
 
-	const color = `\x1b[3${ColorMapValue[fontColorKey] ?? ColorMapValue.White}m${bgColorKey
-		? `\x1b[4${ColorMapValue[bgColorKey]}m`
-		: ''}`
+/**
+ * @title color
+ * @description 指定字段颜色打印
+ * @param source 待打印信息
+ * @param ...keys Styles[]  
+ * @returns 
+ */
+export function color(source: any, ...keys: Styles[]) {
 	const isNotBrowser: boolean = typeof global === 'object'
-
-	return function (reg = '%s', ...args: any[]) {
-		if (isNotBrowser) args.push('\x1b[0m')
-		console.log(`\x1b[0m${color}${reg}`, ...args)
-	}
+	if (isNotBrowser)
+		return keysToString(keys) + JSON.stringify(source, null, 2) + styles.Reset
+	return keysToString(keys) + source
 }
