@@ -43,6 +43,6 @@ export function log(...keys: Styles[]) {
 export function color(source: any, ...keys: Styles[]) {
 	const isNotBrowser: boolean = typeof global === 'object'
 	if (isNotBrowser)
-		return keysToString(keys) + JSON.stringify(source, null, 2) + styles.Reset
+		return keysToString(keys) + source + styles.Reset
 	return keysToString(keys) + source
 }

@@ -14,15 +14,15 @@
 
 ## 方法
 
-### log
+### `log`
 
 - 单行指定
 
-> - `description` : 设置`console`的字体颜色和背景颜色
-> - `param` `...keys` `Styles[]` 样式
-> - `returns` : `function(...args) { ...args: 要打印的内容 }`
+- `description` : 设置`console`的字体颜色和背景颜色
+- `param` `...keys` `Styles[]` 样式
+- `returns` : `function(...args) { ...args: 要打印的内容 }`
 
-### color
+### `color`
 
 - 当行多次指定
 
