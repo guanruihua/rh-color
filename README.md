@@ -33,6 +33,9 @@
 
 eg:`console.log(color('Reverse', 'Reverse', 'Black', 'RedBG'))`
 
+- 若要去除每个`color(...)`之间的空格
+- 可用: `log(color(...), color(...), ...)`
+
 ### 使用
 
 ```shell

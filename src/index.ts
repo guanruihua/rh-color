@@ -22,8 +22,16 @@ function keysToString(keys: Styles | Styles[]) {
  * @param ...keys Styles[] 样式
  * @returns function(...args) { ...args: 要打印的内容 }
  */
-export function log(...keys: Styles[]) {
-	const color = keysToString(keys)
+// export function log(...keys: Styles[]) {
+export function log(...keys: (Styles | string)[]) {
+
+	if (keys.filter(i => typeof i === 'string').length) {
+		console.log(new Array(keys.length).fill('%s').join(''), ...keys)
+		return
+	}
+
+	const color = keysToString(keys as Styles[])
+
 	const isNotBrowser: boolean = typeof global === 'object'
 
 	return function (...args: any[]) {
