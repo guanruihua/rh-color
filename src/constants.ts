@@ -35,5 +35,5 @@ export const styles: {
 	// Float: "%f",
 	// Dom: "%o",
 	// Object: "%O",
-	// CSS: "%c"
+	// CSS: "%c"l
 }
