@@ -1,7 +1,7 @@
 export * from "../src";
 // export * from "../lib/index";
 // 
-// import './color.test'
+import './color.test'
 import './log.expand.test'
 // import './mult.test'
 

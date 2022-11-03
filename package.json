@@ -1,7 +1,7 @@
 {
   "name": "rh-color",
-  "version": "1.0.2",
-  "description": "颜色console",
+  "version": "1.0.5",
+  "description": "格式化console",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "unpkg": "lib/",
@@ -15,6 +15,13 @@
     "eslint": "eslint . --ext .ts --fix",
     "pub": "npm publish"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:guanruihua/rh-color.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guanruihua/rh-color/issues"
+  },
   "keywords": [
     "typescript",
     "javascript",
@@ -23,20 +30,20 @@
     "log"
   ],
   "author": "ruihuag",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@types/bluebird": "^3.5.36",
-    "@types/node": "^16.11.6",
+    "@types/node": "^16.11.21",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
     "eslint": "^8.7.0",
-    "lint-staged": "^12.0.3",
+    "lint-staged": "^12.3.2",
     "node-notifier": "^8.0.2",
-    "prettier": "^2.4.1",
+    "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.66.1",
     "rollup-plugin-babel": "^4.4.0",
@@ -47,7 +54,7 @@
     "ts-node": "^10.4.0",
     "ts-node-dev": "^1.1.8",
     "ts-toolbelt": "^9.6.0",
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.5"
   },
   "dependencies": {
     "reflect-metadata": "^0.1.13",

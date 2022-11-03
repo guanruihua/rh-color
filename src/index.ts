@@ -22,24 +22,13 @@ function keysToString(keys: Styles | Styles[]) {
  * @param ...keys Styles[] 样式
  * @returns function(...args) { ...args: 要打印的内容 }
  */
-// export function log(...keys: Styles[]) {
 export function log(...keys: (Styles | string)[]) {
-
-	if (keys.filter(i => typeof i === 'string').length) {
-		console.log(new Array(keys.length).fill('%s').join(''), ...keys)
-		return
-	}
-
 	const color = keysToString(keys as Styles[])
-
-	const isNotBrowser: boolean = typeof global === 'object'
-
 	return function (...args: any[]) {
-		if (isNotBrowser) args.push(styles.Reset)
-		console.log(`\x1b[0m${color}%s`, ...args)
+		const msg: string = args.join(' ') + styles.Reset
+		console.log(`\x1b[0m${color}%s`, msg)
 	}
 }
-
 
 /**
  * @title color
@@ -49,8 +38,5 @@ export function log(...keys: (Styles | string)[]) {
  * @returns 
  */
 export function color(source: any, ...keys: Styles[]) {
-	const isNotBrowser: boolean = typeof global === 'object'
-	if (isNotBrowser)
-		return keysToString(keys) + source + styles.Reset
-	return keysToString(keys) + source
+	return keysToString(keys) + source + styles.Reset
 }

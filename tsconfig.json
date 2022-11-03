@@ -7,7 +7,7 @@
     ],
     "declaration": true,
     "sourceMap": true,
-    "removeComments": true,
+    "removeComments": false,
     "noImplicitAny": false,
     "strictNullChecks": true,
     "alwaysStrict": true,
